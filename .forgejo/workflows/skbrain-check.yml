@@ -22,3 +22,15 @@ jobs:
         run: pip install ./framework
       - name: Check the canon
         run: skbrain check --canon . --repo-name "${GITHUB_REPOSITORY##*/}"
+      - name: Warn when the PR author is not a declared writer
+        if: github.event_name == 'pull_request'
+        env:
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          python3 - <<'PY'
+          import os, yaml
+          cfg = yaml.safe_load(open("skbrain.yaml"))
+          author, writers = os.environ.get("AUTHOR", ""), cfg.get("writers", [])
+          if author not in writers:
+              print(f"::warning::PR author {author} is not in skbrain.yaml writers {writers}")
+          PY
