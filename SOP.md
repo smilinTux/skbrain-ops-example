@@ -53,7 +53,7 @@ for how skrsi proposes pages.
 
 ## 9. Maturity-tier + Version reference
 
-T0 (N/A, no key material). Example instance; pins `skbrain-v1.0.0`.
+T0 (N/A, no key material). Example instance; pins `skbrain-v1.0.1`.
 
 <!-- docs-evidence
 verified: 2026-11-14

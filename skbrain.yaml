@@ -1,7 +1,7 @@
 schema: skbrain.instance.v1
 estate: example
 namespace: ops
-framework: skbrain-v1.0.0
+framework: skbrain-v1.0.1
 forge: forge.example.org
 projector_nodes: [example-1]
 skrsi:

@@ -10,7 +10,7 @@ estate canon, then replace every value.
 
 ```bash
 git submodule add https://github.com/smilinTux/skbrain framework
-git -C framework checkout skbrain-v1.0.0
+git -C framework checkout skbrain-v1.0.1
 pip install ./framework
 skbrain check --canon .
 ```
